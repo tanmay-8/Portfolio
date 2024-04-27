@@ -1,11 +1,20 @@
-import React from 'react'
-
+import React from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 const page = () => {
-  return (
-    <div className='w-full h-full min-h-screen bg-[#030014]'>
-      
-    </div>
-  )
-}
+    return (
+        <main className="h-full w-full">
+            <div className="space-y-20">
+                <Hero />    
+                <Skills/>
+                <Projects/>
+                <Contact/>
+            </div>
+        </main>
+    );
+};
 
-export default page
+export default page;
