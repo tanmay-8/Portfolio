@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import StarBgCanvas from "@/components/StarBg";
 import Navbar from "@/components/Navbar";
-import Contact from "@/components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
