@@ -15,32 +15,14 @@ const Navbar = () => {
         setIsMenuOpen(!prev);
     };
     const scrollTo = (id) => {
-        document.getElementById(id).scrollIntoView(true,{behavior:'smooth',block:"end"})
+        document
+            .getElementById(id)
+            .scrollIntoView(true, { behavior: "smooth", block: "end" });
     };
     return (
         <motion.div initial="hidden" animate="visible">
-            <motion.div className="w-full py-5 px-6 fixed top-0 shadow-md shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 md:px-6 lg:px-20">
-                <div className="hidden md:flex items-center justify-center  md:space-x-16 lg:space-x-36 text-white text-lg">
-                    <motion.div
-                        variants={slideInFromTop}
-                        onClick={() => {
-                            scrollTo("aboutMe");
-                        }}
-                    >
-                        <span className="text-slate-300 hover:text-indigo-500 transition-all cursor-pointer font-medium">
-                            About me
-                        </span>
-                    </motion.div>
-                    <motion.div
-                        variants={slideInFromTop}
-                        onClick={() => {
-                            scrollTo("skills");
-                        }}
-                    >
-                        <span className="text-slate-300 hover:text-indigo-500 transition-all cursor-pointer font-medium">
-                            Skills
-                        </span>
-                    </motion.div>
+            <motion.div className="w-full py-5 px-6 fixed top-0 shadow-md shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 md:px-12 lg:px-20">
+                <div className="hidden md:flex items-center justify-between text-white text-lg">
                     <motion.div
                         className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,#2A0E61,theme(colors.indigo.400),theme(colors.indigo.800),theme(colors.purple.800))] bg-[length:200%_auto] animate-gradient font-logo text-5xl drop-shadow-[2px_2px_var(--tw-shadow-color)] shadow-[#4e387c]"
                         variants={slideInFromTop}
@@ -48,17 +30,41 @@ const Navbar = () => {
                         <span className="">T</span>
                         <span className="-ml-3 -mb-3">S</span>
                     </motion.div>
-                    <motion.div
-                        variants={slideInFromTop}
-                        onClick={() => {
-                            scrollTo("projects");
-                        }}
-                    >
-                        <span className="text-slate-300 hover:text-indigo-500 transition-all cursor-pointer font-medium">
-                            Projects
-                        </span>
-                    </motion.div>
-                    <motion.div
+                    <div className="flex items-center justify-center  md:space-x-10 lg:space-x-20">
+                        {" "}
+                        <motion.div
+                            variants={slideInFromTop}
+                            onClick={() => {
+                                scrollTo("aboutMe");
+                            }}
+                        >
+                            <span className="text-slate-300 hover:text-indigo-400 transition-all cursor-pointer font-medium hover:text-lg">
+                                About me
+                            </span>
+                        </motion.div>
+                        <motion.div
+                            variants={slideInFromTop}
+                            onClick={() => {
+                                scrollTo("skills");
+                            }}
+                        >
+                            <span className="text-slate-300 hover:text-indigo-400 transition-all cursor-pointer font-medium hover:text-lg">
+                                Skills
+                            </span>
+                        </motion.div>
+                        <motion.div
+                            variants={slideInFromTop}
+                            onClick={() => {
+                                scrollTo("projects");
+                            }}
+                        >
+                            <span className="text-slate-300 hover:text-indigo-400 transition-all cursor-pointer font-medium hover:text-lg">
+                                Projects
+                            </span>
+                        </motion.div>
+                    </div>
+
+                    {/* <motion.div
                         variants={slideInFromTop}
                         onClick={() => {
                             scrollTo("contact");
@@ -67,7 +73,7 @@ const Navbar = () => {
                         <span className="text-slate-300 hover:text-indigo-500 transition-all cursor-pointer font-medium">
                             Contact
                         </span>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
                 <div className="md:hidden flex justify-between items-center">
                     <motion.div
@@ -128,7 +134,7 @@ const Navbar = () => {
                         Projects
                     </span>
                 </div>
-                <div
+                {/* <div
                     variants={slideInFromTop}
                     onClick={() => {
                         scrollTo("contact");
@@ -137,7 +143,7 @@ const Navbar = () => {
                     <span className="text-slate-300 hover:text-indigo-500 transition-all cursor-pointer font-medium">
                         Contact
                     </span>
-                </div>
+                </div> */}
             </div>
         </motion.div>
     );

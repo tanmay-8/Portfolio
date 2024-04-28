@@ -11,7 +11,7 @@ const page = () => {
                 <Hero />    
                 <Skills/>
                 <Projects/>
-                <Contact/>
+                <Contact />
             </div>
         </main>
     );
