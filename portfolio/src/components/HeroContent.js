@@ -81,7 +81,7 @@ const HeroContent = () => {
                     </a>
                     <a
                         className="bg-white/10 p-4 rounded-full cursor-pointer tansition-all duration-200 ease-in-out hover:bg-white/15 hover:border-purple-800 hover:shadow-[0_0_2px_#fff,inset_0_0_1px_#fff,0_0_3px_#8a2be2,0_0_5px_#8a2be2,0_0_10px_#8a2be2]"
-                        href="https://github.com/tanmay-8"
+                        href="https://www.linkedin.com/in/tanmay-shingde-6084ab250/"
                         target="_blank"
                     >
                         <Linkedin size={28} color="white" />
